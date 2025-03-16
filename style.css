@@ -1,0 +1,230 @@
+/* Custom styles */
+
+body {
+  padding-top: 56px; /* To account for the fixed navbar */
+}
+
+#hero-section {
+  background-image: url("img/image1.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative;
+}
+
+#hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+}
+
+#hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+#hero-section h1,
+#hero-section p {
+  color: white;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  border: 5px solid white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand i {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  #hero-section {
+    height: auto;
+    padding: 100px 0;
+  }
+
+  .headshot {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+#skills-section {
+  background-color: #212529;
+  color: white;
+  padding: 4rem 0;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.skill-item {
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-10px);
+}
+
+.skill-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.skill-icon-wrapper {
+  font-size: 4rem;
+  color: #0dcaf0; /* Bootstrap info color */
+  margin-bottom: 1rem;
+}
+
+.skill-description {
+  color: #adb5bd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+}
+
+.skill-item:hover .skill-icon-wrapper {
+  color: #00b4d8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .skill-icon-wrapper {
+    font-size: 3rem;
+  }
+
+  .skill-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mission Section Styles */
+#mission-section {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+#mission-section h2 {
+  color: #343a40;
+}
+
+#mission-section h3 {
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+#mission-section .lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+#mission-section img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+#mission-section img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 767px) {
+  #mission-section .row {
+    flex-direction: column-reverse;
+  }
+
+  #mission-section .col-md-6:first-child {
+    margin-top: 2rem;
+  }
+}
+
+/* Carousel Section Styles */
+#carousel-section {
+  background: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
+  padding: 4rem 0;
+}
+
+#carousel-section .carousel {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#carousel-section .carousel-item {
+  height: 400px;
+}
+
+#carousel-section .carousel-item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#carousel-section .carousel-caption {
+  bottom: 2rem;
+}
+
+#carousel-section .carousel-indicators {
+  bottom: -3rem;
+}
+
+#carousel-section .carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 6px;
+}
+
+/* Hover effects for controls */
+#carousel-section .carousel-control-prev,
+#carousel-section .carousel-control-next {
+  width: 5%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#carousel-section .carousel:hover .carousel-control-prev,
+#carousel-section .carousel:hover .carousel-control-next {
+  opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #carousel-section .carousel-item {
+    height: 300px;
+  }
+
+  #carousel-section .carousel-caption {
+    position: relative;
+    background: #343a40;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+  }
+}
+
+.icon-hover i {
+  color: black; /* Default black color */
+  transition: color 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.icon-hover:hover i {
+  color: #007bff; /* Change to blue on hover */
+}
